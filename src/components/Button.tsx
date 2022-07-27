@@ -29,7 +29,7 @@ const ButtonAtom = styled.button`
 `;
 
 export const Button = ({
-  label,
+  label="algo",
   disabled = true,
   ...props
 }:ButtonProps) => <ButtonAtom 
