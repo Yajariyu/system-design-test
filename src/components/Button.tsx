@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import {primary} from "../utils"
-interface ButtonProps {
+export interface ButtonProps {
   /**
    * Button contents
    */
