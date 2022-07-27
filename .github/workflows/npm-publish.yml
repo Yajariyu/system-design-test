@@ -32,7 +32,7 @@ jobs:
       - name: Build app
         run: npm run build 
       - name: npm publish
-        run: npm run build 
+        run: npm publish 
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
