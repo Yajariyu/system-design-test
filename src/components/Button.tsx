@@ -31,9 +31,11 @@ const ButtonAtom = styled.button`
 export const Button = ({
   label="algo",
   disabled = true,
+  onClick,
   ...props
 }:ButtonProps) => <ButtonAtom 
     disabled = {disabled}
+    onClick ={onClick}
     {...props} >
     {label}
 </ButtonAtom>;
