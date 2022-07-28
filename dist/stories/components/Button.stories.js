@@ -15,13 +15,13 @@ exports.Primary = void 0;
 var jsx_runtime_1 = require("react/jsx-runtime");
 var Button_1 = require("../../components/Button");
 exports.default = {
-    title: 'UI/Button',
-    component: Button_1.Button,
+    title: 'atoms/Button',
+    component: Button_1.PrimaryButton,
     // argTypes: {
     //   backgroundColor: { control: 'color' },
     // },
 };
-var Template = function (args) { return (0, jsx_runtime_1.jsx)(Button_1.Button, __assign({}, args)); };
+var Template = function (args) { return (0, jsx_runtime_1.jsx)(Button_1.PrimaryButton, __assign({}, args)); };
 exports.Primary = Template.bind({});
 exports.Primary.args = {
     label: 'Button',

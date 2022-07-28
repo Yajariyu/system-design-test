@@ -1,6 +1,7 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 import {primary} from "../utils"
+
 export interface ButtonProps {
   /**
    * Button contents
@@ -13,48 +14,41 @@ export interface ButtonProps {
   /**
    * Optional click handler
    */
-  onClick?: () => void;
+   onClick?: (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+    ) => void;
 }
 
-const ButtonAtom = styled.button`
-    background-color: ${props=> {return(!props.disabled? primary[100]: primary[300])}};
-    min-width: 343px ;
+
+const AsistensiButton = styled.button`
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+    font-family: 'Poppins', sans-serif;   
+    font-size: 16px;
+    
+    position: absolute;
+    width: 343px;
     height: 60px;
-    padding: 18px 48px;
-    font-size:16px;
-    font-weight : bold ;
+
+    background-color: ${ props => (props.disabled ? 'rgba(255, 34, 82, 0.5)': 'rgba(255, 34, 82, 1)')};
+    color: ${'rgba(255, 255, 255, 1)'};
     border-radius: 24px;
-    border:none;
-    color: white;
+    border: none;
+
 `;
 
-export const Button = ({
-  label="algo",
-  disabled = true,
-  onClick,
-  ...props
-}:ButtonProps) => <ButtonAtom 
-    disabled = {disabled}
-    onClick ={onClick}
-    {...props} >
-    {label}
-</ButtonAtom>;
-// export const Button = ({
-//   primary = false,
-//   size = 'medium',
-//   backgroundColor,
-//   label,
-//   ...props
-// }: ButtonProps) => {
-//   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
-//   return (
-//     <button
-//       type="button"
-//       className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-//       style={{ backgroundColor }}
-//       {...props}
-//     >
-//       {label}
-//     </button>
-//   );
-// };
+export const PrimaryButton = ({
+    disabled = false,
+    label = "call to action",
+    onClick,
+    }: ButtonProps) => {
+
+
+    return <AsistensiButton
+            disabled={disabled}
+            onClick={onClick}
+            >
+                {label}
+            </AsistensiButton>
+    
+}
+

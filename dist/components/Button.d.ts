@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from 'react';
 export interface ButtonProps {
     /**
      * Button contents
@@ -11,6 +11,6 @@ export interface ButtonProps {
     /**
      * Optional click handler
      */
-    onClick?: () => void;
+    onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
-export declare const Button: ({ label, disabled, ...props }: ButtonProps) => JSX.Element;
+export declare const PrimaryButton: ({ disabled, label, onClick, }: ButtonProps) => JSX.Element;

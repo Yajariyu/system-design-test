@@ -1,5 +1,5 @@
 /// <reference types="react" />
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-declare const _default: ComponentMeta<({ label, disabled, ...props }: import("../../components/Button").ButtonProps) => JSX.Element>;
+declare const _default: ComponentMeta<({ disabled, label, onClick, }: import("../../components/Button").ButtonProps) => JSX.Element>;
 export default _default;
-export declare const Primary: ComponentStory<({ label, disabled, ...props }: import("../../components/Button").ButtonProps) => JSX.Element>;
+export declare const Primary: ComponentStory<({ disabled, label, onClick, }: import("../../components/Button").ButtonProps) => JSX.Element>;
