@@ -19,7 +19,6 @@ export interface ButtonProps {
     ) => void;
 }
 
-
 const AsistensiButton = styled.button`
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
     font-family: 'Poppins', sans-serif;   
@@ -36,6 +35,14 @@ const AsistensiButton = styled.button`
 
 `;
 
+
+/**
+ * Style action buttons.
+ *
+ * Button renders as a button element by default.
+ *
+ * This component supports rest props additonal to those shows in props table.
+ */
 export const PrimaryButton = ({
     disabled = false,
     label = "call to action",
